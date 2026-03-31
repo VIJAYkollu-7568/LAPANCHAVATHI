@@ -1,16 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/restaurant/Navbar";
+import HeroSection from "@/components/restaurant/HeroSection";
+import AboutSection from "@/components/restaurant/AboutSection";
+import MenuSection from "@/components/restaurant/MenuSection";
+import WhyChooseSection from "@/components/restaurant/WhyChooseSection";
+import TestimonialsSection from "@/components/restaurant/TestimonialsSection";
+import ReviewForm from "@/components/restaurant/ReviewForm";
+import ContactSection from "@/components/restaurant/ContactSection";
+import Footer from "@/components/restaurant/Footer";
+import StickyCTA from "@/components/restaurant/StickyCTA";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen">
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <MenuSection />
+      <WhyChooseSection />
+      <TestimonialsSection />
+      <ReviewForm />
+      <ContactSection />
+      <Footer />
+      <StickyCTA />
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
