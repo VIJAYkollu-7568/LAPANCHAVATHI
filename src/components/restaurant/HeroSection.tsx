@@ -1,12 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Star } from "lucide-react";
-import heroImage from "@/assets/hero-restaurant.jpg";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
+import heroFallback from "@/assets/hero-restaurant.jpg";
 
 const HeroSection = () => {
+  const { data: heroImages = [] } = useQuery({
+    queryKey: ["site_images_hero"],
+    queryFn: async () => {
+      const { data } = await supabase.from("site_images").select("*").eq("section", "hero").order("display_order").limit(1);
+      return data || [];
+    },
+  });
+
+  const heroSrc = heroImages.length > 0 ? heroImages[0].image_url : heroFallback;
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroImage} alt="LA Panchavati Pure Veg Restaurant" width={1920} height={1080} className="w-full h-full object-cover" />
+        <img src={heroSrc} alt="LA Panchavati Pure Veg Restaurant" width={1920} height={1080} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
       </div>
 

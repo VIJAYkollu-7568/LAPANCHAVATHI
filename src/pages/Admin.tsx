@@ -69,6 +69,7 @@ const AdminPage = () => {
         </div>
         {tab === "categories" && <AdminCategories />}
         {tab === "items" && <AdminItems />}
+        {tab === "images" && <AdminImages />}
         {tab === "reviews" && <AdminReviews />}
       </div>
     </div>
