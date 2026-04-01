@@ -31,30 +31,25 @@ const ReviewForm = () => {
   };
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container max-w-lg mx-auto">
-        <h2 className="font-heading text-3xl font-bold text-center mb-8">
+    <section className="py-16 bg-background">
+      <div className="container max-w-md mx-auto text-center">
+        <p className="text-accent text-[11px] font-medium tracking-[0.2em] uppercase mb-2">Feedback</p>
+        <h2 className="font-heading text-2xl font-bold mb-6">
           Share Your <span className="text-gradient-gold">Experience</span>
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-4 bg-card border border-border rounded-xl p-6">
-          <Input placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} maxLength={100} />
+        <form onSubmit={handleSubmit} className="space-y-3 bg-card border border-border/50 rounded-xl p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] text-left">
+          <Input placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} maxLength={100} className="text-sm" />
           <div className="flex items-center gap-1">
-            <span className="text-sm text-muted-foreground mr-2">Rating:</span>
+            <span className="text-xs text-muted-foreground mr-2">Rating:</span>
             {[1, 2, 3, 4, 5].map((star) => (
-              <button
-                key={star}
-                type="button"
-                onClick={() => setRating(star)}
-                onMouseEnter={() => setHoverRating(star)}
-                onMouseLeave={() => setHoverRating(0)}
-              >
-                <Star className={`w-6 h-6 transition-colors ${star <= (hoverRating || rating) ? "fill-gold text-gold" : "text-border"}`} />
+              <button key={star} type="button" onClick={() => setRating(star)} onMouseEnter={() => setHoverRating(star)} onMouseLeave={() => setHoverRating(0)}>
+                <Star className={`w-5 h-5 transition-colors ${star <= (hoverRating || rating) ? "fill-gold text-gold" : "text-border"}`} />
               </button>
             ))}
           </div>
-          <Textarea placeholder="Tell us about your experience..." value={text} onChange={(e) => setText(e.target.value)} rows={4} maxLength={1000} />
-          <Button type="submit" variant="hero" className="w-full gap-2" disabled={submitting}>
-            <Send className="w-4 h-4" /> {submitting ? "Submitting..." : "Submit Review"}
+          <Textarea placeholder="Tell us about your experience..." value={text} onChange={(e) => setText(e.target.value)} rows={3} maxLength={1000} className="text-sm" />
+          <Button type="submit" variant="hero" size="sm" className="w-full gap-2" disabled={submitting}>
+            <Send className="w-3.5 h-3.5" /> {submitting ? "Submitting..." : "Submit Review"}
           </Button>
         </form>
       </div>
