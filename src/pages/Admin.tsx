@@ -6,12 +6,13 @@ import { LogOut } from "lucide-react";
 import AdminCategories from "@/components/admin/AdminCategories";
 import AdminItems from "@/components/admin/AdminItems";
 import AdminReviews from "@/components/admin/AdminReviews";
+import AdminImages from "@/components/admin/AdminImages";
 
 const AdminPage = () => {
   const [loggedIn, setLoggedIn] = useState(isAdminLoggedIn());
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [tab, setTab] = useState<"categories" | "items" | "reviews">("categories");
+  const [tab, setTab] = useState<"categories" | "items" | "reviews" | "images">("categories");
   const [error, setError] = useState("");
 
   const handleLogin = (e: React.FormEvent) => {
