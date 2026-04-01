@@ -4,10 +4,10 @@ import heroImage from "@/assets/hero-restaurant.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroImage} alt="LA Panchavati Pure Veg Restaurant" width={1920} height={1080} className="w-full h-full object-cover scale-105" />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/60 to-navy/90" />
+        <img src={heroImage} alt="LA Panchavati Pure Veg Restaurant" width={1920} height={1080} className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
       </div>
 
       {/* Floating 3D decorative elements */}
