@@ -109,6 +109,33 @@ export type Database = {
         }
         Relationships: []
       }
+      site_images: {
+        Row: {
+          created_at: string
+          display_order: number
+          id: string
+          image_url: string
+          label: string | null
+          section: string
+        }
+        Insert: {
+          created_at?: string
+          display_order?: number
+          id?: string
+          image_url: string
+          label?: string | null
+          section: string
+        }
+        Update: {
+          created_at?: string
+          display_order?: number
+          id?: string
+          image_url?: string
+          label?: string | null
+          section?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
