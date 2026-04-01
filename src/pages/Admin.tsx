@@ -43,6 +43,7 @@ const AdminPage = () => {
   const tabs = [
     { id: "categories" as const, label: "Categories" },
     { id: "items" as const, label: "Menu Items" },
+    { id: "images" as const, label: "Site Images" },
     { id: "reviews" as const, label: "Reviews" },
   ];
 
