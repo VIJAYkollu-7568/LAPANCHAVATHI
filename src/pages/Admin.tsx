@@ -7,7 +7,7 @@ import AdminCategories from "@/components/admin/AdminCategories";
 import AdminItems from "@/components/admin/AdminItems";
 import AdminReviews from "@/components/admin/AdminReviews";
 import AdminImages from "@/components/admin/AdminImages";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-clean.png";
 
 const AdminPage = () => {
   const [loggedIn, setLoggedIn] = useState(isAdminLoggedIn());
