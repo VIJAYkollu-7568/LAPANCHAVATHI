@@ -2,7 +2,8 @@ import { useState } from "react";
 import { validateAdmin, loginAdmin, logoutAdmin, isAdminLoggedIn } from "@/lib/adminAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { LogOut, LayoutGrid, UtensilsCrossed, Image, Star } from "lucide-react";
+import { LogOut, LayoutGrid, UtensilsCrossed, Image, Star, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/components/ThemeProvider";
 import AdminCategories from "@/components/admin/AdminCategories";
 import AdminItems from "@/components/admin/AdminItems";
 import AdminReviews from "@/components/admin/AdminReviews";
@@ -15,6 +16,7 @@ const AdminPage = () => {
   const [password, setPassword] = useState("");
   const [tab, setTab] = useState<"categories" | "items" | "reviews" | "images">("categories");
   const [error, setError] = useState("");
+  const { theme, toggleTheme } = useTheme();
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -90,14 +92,23 @@ const AdminPage = () => {
             />
             <span className="text-xs font-medium text-accent/80 bg-accent/10 px-2 py-0.5 rounded-full">Admin</span>
           </div>
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => { logoutAdmin(); setLoggedIn(false); }}
-            className="text-muted-foreground hover:text-primary-foreground gap-1.5"
-          >
-            <LogOut className="w-4 h-4" /> Logout
-          </Button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 text-accent transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === "light" ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
+            </button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => { logoutAdmin(); setLoggedIn(false); }}
+              className="text-muted-foreground hover:text-primary-foreground gap-1.5"
+            >
+              <LogOut className="w-4 h-4" /> Logout
+            </Button>
+          </div>
         </div>
       </header>
 
