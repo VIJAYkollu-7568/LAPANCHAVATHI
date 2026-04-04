@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const links = [
   { label: "About", href: "#about" },
@@ -15,8 +16,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-md border-b border-border/20">
       <div className="container flex items-center justify-between h-16">
-        <a href="/" className="font-heading text-xl font-bold text-primary-foreground">
-          LA <span className="text-gradient-gold">Panchavati</span>
+        <a href="/" className="flex items-center gap-2">
+          <img src={logo} alt="LA Panchavati" className="h-10 w-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]" />
         </a>
         <div className="hidden md:flex items-center gap-6">
           {links.map((l) => (
