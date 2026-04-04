@@ -16,6 +16,7 @@ const AdminPage = () => {
   const [password, setPassword] = useState("");
   const [tab, setTab] = useState<"categories" | "items" | "reviews" | "images">("categories");
   const [error, setError] = useState("");
+  const { theme, toggleTheme } = useTheme();
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
