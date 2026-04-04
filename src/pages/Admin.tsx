@@ -92,14 +92,23 @@ const AdminPage = () => {
             />
             <span className="text-xs font-medium text-accent/80 bg-accent/10 px-2 py-0.5 rounded-full">Admin</span>
           </div>
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => { logoutAdmin(); setLoggedIn(false); }}
-            className="text-muted-foreground hover:text-primary-foreground gap-1.5"
-          >
-            <LogOut className="w-4 h-4" /> Logout
-          </Button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 text-accent transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === "light" ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
+            </button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => { logoutAdmin(); setLoggedIn(false); }}
+              className="text-muted-foreground hover:text-primary-foreground gap-1.5"
+            >
+              <LogOut className="w-4 h-4" /> Logout
+            </Button>
+          </div>
         </div>
       </header>
 
