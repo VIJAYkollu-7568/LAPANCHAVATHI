@@ -1,4 +1,5 @@
 import { Phone, MapPin, Clock } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -6,9 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="font-heading text-xl font-bold text-primary-foreground mb-3">
-              LA <span className="text-gradient-gold">Panchavati</span>
-            </h3>
+            <img src={logo} alt="LA Panchavati" className="h-12 w-auto mb-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]" />
             <p className="text-sm leading-relaxed">Pure vegetarian restaurant serving Andhra, North Indian, Chinese, South Indian & more.</p>
           </div>
           <div className="space-y-3">
