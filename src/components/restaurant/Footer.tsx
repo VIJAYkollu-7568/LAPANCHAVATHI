@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <img src={logo} alt="LA Panchavati" className="h-12 w-auto mb-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]" />
+            <img src={logo} alt="LA Panchavati" className="h-16 w-auto mb-3 drop-shadow-[0_4px_12px_rgba(0,0,0,0.25)]" />
             <p className="text-sm leading-relaxed">Pure vegetarian restaurant serving Andhra, North Indian, Chinese, South Indian & more.</p>
           </div>
           <div className="space-y-3">
