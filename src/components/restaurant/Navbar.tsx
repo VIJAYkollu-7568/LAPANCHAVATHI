@@ -29,11 +29,9 @@ const Navbar = () => {
             <a href="tel:09642374666"><Phone className="w-4 h-4" /> Call Now</a>
           </Button>
         </div>
-        <div className="flex items-center gap-2 md:hidden">
-          <button onClick={() => setOpen(!open)} className="text-primary-foreground">
-            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
+        <button onClick={() => setOpen(!open)} className="md:hidden text-primary-foreground">
+          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </div>
       {open && (
         <div className="md:hidden bg-navy border-t border-border/20 pb-4">
