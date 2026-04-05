@@ -3,6 +3,7 @@ import { Phone, MapPin, Star } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import heroFallback from "@/assets/hero-restaurant.jpg";
+import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   const { data: heroImages = [] } = useQuery({
@@ -29,10 +30,18 @@ const HeroSection = () => {
 
       <div className="container relative z-10 py-16 md:py-24 text-center">
         <div className="max-w-xl mx-auto space-y-5">
-          <p className="text-gold/80 text-[11px] font-medium tracking-[0.25em] uppercase">
+          {/* Animated Logo */}
+          <div className="flex justify-center mb-2">
+            <img 
+              src={logo} 
+              alt="LA Panchavati" 
+              className="h-28 md:h-36 lg:h-44 w-auto animate-fade-in drop-shadow-[0_8px_32px_rgba(194,120,3,0.4)] hover:drop-shadow-[0_12px_48px_rgba(194,120,3,0.6)] transition-all duration-700 hover:scale-105"
+            />
+          </div>
+          <p className="text-gold/80 text-[11px] font-medium tracking-[0.25em] uppercase animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
             — Pure Vegetarian Excellence —
           </p>
-          <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-primary-foreground">
+          <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-primary-foreground animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
             LA Panchavati
             <span className="block text-gradient-gold text-2xl md:text-3xl lg:text-4xl mt-1">Pure Veg Restaurant</span>
           </h1>
