@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-md border-b border-border/20">
       <div className="container flex items-center justify-between h-16">
         <a href="/" className="flex items-center gap-2 group">
-          <img src={logo} alt="LA Panchavati" className="h-14 w-auto drop-shadow-[0_4px_16px_rgba(194,120,3,0.3)] transition-all duration-500 group-hover:drop-shadow-[0_6px_24px_rgba(194,120,3,0.5)] group-hover:scale-105" />
+          <img src={logo} alt="LA Panchavati" className="h-14 w-auto animate-pulse drop-shadow-[0_4px_16px_rgba(194,120,3,0.3)] transition-all duration-700 group-hover:drop-shadow-[0_8px_32px_rgba(194,120,3,0.6)] group-hover:scale-110 group-hover:rotate-1" />
         </a>
         <div className="hidden md:flex items-center gap-6">
           {links.map((l) => (

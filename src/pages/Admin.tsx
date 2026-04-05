@@ -2,16 +2,18 @@ import { useState } from "react";
 import { validateAdmin, loginAdmin, logoutAdmin, isAdminLoggedIn } from "@/lib/adminAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { LogOut, LayoutGrid, UtensilsCrossed, Image, Star, ShieldCheck } from "lucide-react";
+import { Eye, EyeOff, LogOut, LayoutGrid, UtensilsCrossed, Image, Star, ShieldCheck } from "lucide-react";
 import AdminCategories from "@/components/admin/AdminCategories";
 import AdminItems from "@/components/admin/AdminItems";
 import AdminReviews from "@/components/admin/AdminReviews";
 import AdminImages from "@/components/admin/AdminImages";
+import logo from "@/assets/logo.png";
 
 const AdminPage = () => {
   const [loggedIn, setLoggedIn] = useState(isAdminLoggedIn());
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [tab, setTab] = useState<"categories" | "items" | "reviews" | "images">("categories");
   const [error, setError] = useState("");
 
@@ -33,10 +35,12 @@ const AdminPage = () => {
           onSubmit={handleLogin}
           className="w-full max-w-sm space-y-6 rounded-2xl p-8 border border-border bg-card shadow-xl"
         >
-          <div className="flex flex-col items-center gap-3">
-            <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center">
-              <ShieldCheck className="w-7 h-7 text-accent" />
-            </div>
+          <div className="flex flex-col items-center gap-4">
+            <img
+              src={logo}
+              alt="LA Panchavati"
+              className="h-24 w-auto animate-pulse"
+            />
             <h1 className="font-heading text-xl font-semibold text-foreground">Admin Dashboard</h1>
             <p className="text-sm text-muted-foreground">Sign in to manage your restaurant</p>
           </div>
@@ -46,13 +50,23 @@ const AdminPage = () => {
             onChange={(e) => setUsername(e.target.value)}
             className="bg-background border-border text-foreground placeholder:text-muted-foreground"
           />
-          <Input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="bg-background border-border text-foreground placeholder:text-muted-foreground"
-          />
+          <div className="relative">
+            <Input
+              type={showPassword ? "text" : "password"}
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="bg-background border-border text-foreground placeholder:text-muted-foreground pr-12"
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword((prev) => !prev)}
+              className="absolute inset-y-0 right-3 flex items-center text-muted-foreground hover:text-foreground"
+              aria-label={showPassword ? "Hide password" : "Show password"}
+            >
+              {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+            </button>
+          </div>
           {error && <p className="text-destructive text-sm text-center">{error}</p>}
           <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
             Sign In
@@ -74,8 +88,8 @@ const AdminPage = () => {
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-border bg-card/80 backdrop-blur-sm shadow-sm">
         <div className="container flex items-center justify-between h-14">
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="w-5 h-5 text-accent" />
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="LA Panchavati" className="h-10 w-auto" />
             <span className="font-heading font-semibold text-foreground">Admin</span>
           </div>
           <Button
