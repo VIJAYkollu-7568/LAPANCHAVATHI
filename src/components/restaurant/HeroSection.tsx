@@ -3,6 +3,7 @@ import { Phone, MapPin, Star } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import heroFallback from "@/assets/hero-restaurant.jpg";
+import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   const { data: heroImages = [] } = useQuery({
