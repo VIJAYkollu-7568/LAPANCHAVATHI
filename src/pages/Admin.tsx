@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { validateAdmin, loginAdmin, logoutAdmin, isAdminLoggedIn } from "@/lib/adminAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Eye, EyeOff, LogOut, LayoutGrid, UtensilsCrossed, Image, Star, ShieldCheck } from "lucide-react";
+import { Eye, EyeOff, LogOut, LayoutGrid, UtensilsCrossed, Image, Star, ShieldCheck, Home } from "lucide-react";
 import AdminCategories from "@/components/admin/AdminCategories";
 import AdminItems from "@/components/admin/AdminItems";
 import AdminReviews from "@/components/admin/AdminReviews";
@@ -71,6 +72,15 @@ const AdminPage = () => {
           <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
             Sign In
           </Button>
+          <Button
+            variant="ghost"
+            className="w-full text-muted-foreground hover:text-foreground gap-2"
+            asChild
+          >
+            <Link to="/">
+              <Home className="w-4 h-4" /> Back to Home
+            </Link>
+          </Button>
         </form>
       </div>
     );
@@ -92,14 +102,26 @@ const AdminPage = () => {
             <img src={logo} alt="LA Panchavati" className="h-10 w-auto" />
             <span className="font-heading font-semibold text-foreground">Admin</span>
           </div>
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => { logoutAdmin(); setLoggedIn(false); }}
-            className="text-muted-foreground hover:text-foreground gap-1.5"
-          >
-            <LogOut className="w-4 h-4" /> Logout
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="sm"
+              asChild
+              className="text-muted-foreground hover:text-foreground gap-1.5"
+            >
+              <Link to="/">
+                <Home className="w-4 h-4" /> Back to Home
+              </Link>
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => { logoutAdmin(); setLoggedIn(false); }}
+              className="text-muted-foreground hover:text-foreground gap-1.5"
+            >
+              <LogOut className="w-4 h-4" /> Logout
+            </Button>
+          </div>
         </div>
       </header>
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
@@ -28,6 +28,11 @@ const Navbar = () => {
           <Button variant="hero" size="sm" className="gap-1.5" asChild>
             <a href="tel:09642374666"><Phone className="w-4 h-4" /> Call Now</a>
           </Button>
+          <Button variant="ghost" size="sm" className="p-2 text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10" asChild>
+            <a href="/admin" title="Admin Panel">
+              <ShieldCheck className="w-4 h-4" />
+            </a>
+          </Button>
         </div>
         <button onClick={() => setOpen(!open)} className="md:hidden text-primary-foreground">
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -41,8 +46,13 @@ const Navbar = () => {
             </a>
           ))}
           <div className="px-6 pt-2">
-            <Button variant="hero" size="sm" className="w-full gap-1.5" asChild>
+            <Button variant="hero" size="sm" className="w-full gap-1.5 mb-2" asChild>
               <a href="tel:09642374666"><Phone className="w-4 h-4" /> Call Now</a>
+            </Button>
+            <Button variant="ghost" size="sm" className="w-full gap-2 text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10" asChild>
+              <a href="/admin">
+                <ShieldCheck className="w-4 h-4" /> Admin
+              </a>
             </Button>
           </div>
         </div>

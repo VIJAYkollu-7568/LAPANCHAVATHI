@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MapPin, Star } from "lucide-react";
+import { Phone, MapPin, Star, ShoppingCart } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import heroFallback from "@/assets/hero-restaurant.jpg";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 const HeroSection = () => {
   const { data: heroImages = [] } = useQuery({
@@ -50,7 +51,57 @@ const HeroSection = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 pt-3 justify-center">
-            <Button variant="hero" size="default" className="gap-2 shadow-[0_8px_24px_rgba(194,120,3,0.3)] hover:shadow-[0_12px_32px_rgba(194,120,3,0.4)] transition-shadow" asChild>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button variant="hero" size="default" className="gap-2 shadow-[0_8px_24px_rgba(194,120,3,0.3)] hover:shadow-[0_12px_32px_rgba(194,120,3,0.4)] transition-shadow">
+                  <ShoppingCart className="w-4 h-4" /> Order Online
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle>Choose Your Delivery Platform</DialogTitle>
+                </DialogHeader>
+                <div className="flex flex-col gap-4 py-4">
+                  <Button
+                    variant="outline"
+                    className="gap-2 justify-start"
+                    asChild
+                  >
+                    <a
+                      href="https://www.swiggy.com/city/rajahmundry/la-panchavati-syamala-nagar-ava-road-rest458620"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="https://logos-world.net/wp-content/uploads/2020/11/Swiggy-Logo.png"
+                        alt="Swiggy"
+                        className="w-6 h-6"
+                      />
+                      Order from Swiggy
+                    </a>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="gap-2 justify-start"
+                    asChild
+                  >
+                    <a
+                      href="https://www.zomato.com/rajahmundry/la-panchavati-rajahmundry-locality/order"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="https://logos-world.net/wp-content/uploads/2020/11/Zomato-Logo.png"
+                        alt="Zomato"
+                        className="w-6 h-6"
+                      />
+                      Order from Zomato
+                    </a>
+                  </Button>
+                </div>
+              </DialogContent>
+            </Dialog>
+            <Button variant="hero" size="default" className="gap-2 shadow-[0_8px_24px_rgba(194,120,3,0.3)] hover:shadow-[0_12px_24px_rgba(194,120,3,0.4)] transition-shadow" asChild>
               <a href="tel:09642374666">
                 <Phone className="w-4 h-4" /> Call Now
               </a>
