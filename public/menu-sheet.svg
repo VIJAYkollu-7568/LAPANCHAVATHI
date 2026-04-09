@@ -1,0 +1,204 @@
+<svg width="1400" height="3200" viewBox="0 0 1400 3200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8f0e4"/>
+      <stop offset="100%" stop-color="#fdf7f0"/>
+    </linearGradient>
+    <style>
+      .title { font-family: Georgia, serif; font-size: 56px; font-weight: 700; fill: #8b2d24; }
+      .subtitle { font-family: Georgia, serif; font-size: 20px; fill: #8b2d24; }
+      .category { font-family: Georgia, serif; font-size: 32px; font-weight: 700; fill: #a0522d; margin-top: 20px; }
+      .item-name { font-family: Inter, sans-serif; font-size: 18px; fill: #7a5a49; }
+      .item-price { font-family: Inter, sans-serif; font-size: 18px; fill: #a0522d; font-weight: 600; }
+    </style>
+  </defs>
+  <rect width="1400" height="3200" fill="url(#bgGrad)" />
+  <rect x="60" y="60" width="1280" height="3080" rx="32" fill="#fff9f0" stroke="#d9c2a7" stroke-width="6" />
+  
+  <!-- Header -->
+  <text x="100" y="140" class="title">LA Panchavati</text>
+  <text x="100" y="185" class="subtitle">Pure Veg Restaurant - Full Menu</text>
+  <line x1="100" y1="210" x2="1300" y2="210" stroke="#d9c2a7" stroke-width="3" />
+  
+  <!-- LEFT COLUMN -->
+  <!-- Idly Section -->
+  <text x="100" y="270" class="category">🥞 Idly</text>
+  <text x="120" y="310" class="item-name">Idly</text><text x="600" y="310" class="item-price">₹59</text>
+  <text x="120" y="345" class="item-name">Sambar Idly</text><text x="600" y="345" class="item-price">₹75</text>
+  <text x="120" y="380" class="item-name">Ghee Idly</text><text x="600" y="380" class="item-price">₹75</text>
+  <text x="120" y="415" class="item-name">Guntur Karam Idly</text><text x="600" y="415" class="item-price">₹89</text>
+  <text x="120" y="450" class="item-name">Single Idly</text><text x="600" y="450" class="item-price">₹35</text>
+  <text x="120" y="485" class="item-name">Single Sambar Idly</text><text x="600" y="485" class="item-price">₹45</text>
+  <text x="120" y="520" class="item-name">Button Sambar Idly</text><text x="600" y="520" class="item-price">₹109</text>
+  
+  <!-- Morning Tiffins -->
+  <text x="100" y="585" class="category">🌅 Morning Tiffins (7:00 am to 11:30 am)</text>
+  <text x="120" y="625" class="item-name">Gaari</text><text x="600" y="625" class="item-price">₹85</text>
+  <text x="120" y="660" class="item-name">Sambar Gaari</text><text x="600" y="660" class="item-price">₹99</text>
+  <text x="120" y="695" class="item-name">Tomato Bath</text><text x="600" y="695" class="item-price">₹85</text>
+  <text x="120" y="730" class="item-name">Upma</text><text x="600" y="730" class="item-price">₹75</text>
+  <text x="120" y="765" class="item-name">Mysore Bajji</text><text x="600" y="765" class="item-price">₹85</text>
+  <text x="120" y="800" class="item-name">Single Bajji</text><text x="600" y="800" class="item-price">₹49</text>
+  <text x="120" y="835" class="item-name">Pongal</text><text x="600" y="835" class="item-price">₹99</text>
+  <text x="120" y="870" class="item-name">Single Sambar Gaari</text><text x="600" y="870" class="item-price">₹49</text>
+  
+  <!-- Dosa -->
+  <text x="100" y="935" class="category">🥞 Dosa (7:00 am to 11:30 am)</text>
+  <text x="120" y="975" class="item-name">Dosa</text><text x="600" y="975" class="item-price">₹79</text>
+  <text x="120" y="1010" class="item-name">Onion Dosa</text><text x="600" y="1010" class="item-price">₹99</text>
+  <text x="120" y="1045" class="item-name">Masala Dosa</text><text x="600" y="1045" class="item-price">₹109</text>
+  <text x="120" y="1080" class="item-name">Onion Masala Dosa</text><text x="600" y="1080" class="item-price">₹119</text>
+  <text x="120" y="1115" class="item-name">Ravva Dosa</text><text x="600" y="1115" class="item-price">₹99</text>
+  <text x="120" y="1150" class="item-name">Onion Ravva Dosa</text><text x="600" y="1150" class="item-price">₹119</text>
+  <text x="120" y="1185" class="item-name">Masala Ravva Dosa</text><text x="600" y="1185" class="item-price">₹119</text>
+  <text x="120" y="1220" class="item-name">Special Ravva Dosa</text><text x="600" y="1220" class="item-price">₹159</text>
+  <text x="120" y="1255" class="item-name">Onion Masala Ravva Dosa</text><text x="600" y="1255" class="item-price">₹129</text>
+  <text x="120" y="1290" class="item-name">Karam Dosa</text><text x="600" y="1290" class="item-price">₹105</text>
+  <text x="120" y="1325" class="item-name">Ghee Dosa</text><text x="600" y="1325" class="item-price">₹95</text>
+  
+  <!-- Cheese Dosa -->
+  <text x="100" y="1390" class="category">🧀 Cheese Dosa</text>
+  <text x="120" y="1430" class="item-name">Cheese Dosa</text><text x="600" y="1430" class="item-price">₹159</text>
+  <text x="120" y="1465" class="item-name">Corn Cheese Dosa</text><text x="600" y="1465" class="item-price">₹179</text>
+  
+  <!-- Uthappam -->
+  <text x="100" y="1530" class="category">🫓 Uthappam (7:00 am to 11:30 am)</text>
+  <text x="120" y="1570" class="item-name">Plain Uthappam</text><text x="600" y="1570" class="item-price">₹99</text>
+  <text x="120" y="1605" class="item-name">Onion Uthappam</text><text x="600" y="1605" class="item-price">₹119</text>
+  <text x="120" y="1640" class="item-name">Masala Uthappam</text><text x="600" y="1640" class="item-price">₹129</text>
+  <text x="120" y="1675" class="item-name">Special Uthappam</text><text x="600" y="1675" class="item-price">₹149</text>
+  
+  <!-- Pesarattu -->
+  <text x="100" y="1740" class="category">🌿 Pesarattu (7:00 am to 11:30 am)</text>
+  <text x="120" y="1780" class="item-name">Pesarattu</text><text x="600" y="1780" class="item-price">₹99</text>
+  <text x="120" y="1815" class="item-name">Onion Pesarattu</text><text x="600" y="1815" class="item-price">₹119</text>
+  <text x="120" y="1850" class="item-name">Butter Pesarattu</text><text x="600" y="1850" class="item-price">₹119</text>
+  <text x="120" y="1885" class="item-name">Ghee Pesarattu</text><text x="600" y="1885" class="item-price">₹119</text>
+  <text x="120" y="1920" class="item-name">Upma Pesarattu</text><text x="600" y="1920" class="item-price">₹139</text>
+  <text x="120" y="1955" class="item-name">Upma Pesarattu (MLA)</text><text x="600" y="1955" class="item-price">₹159</text>
+  
+  <!-- Combos -->
+  <text x="100" y="2020" class="category">🍽️ Combos (7:00 am to 11:00 am)</text>
+  <text x="120" y="2060" class="item-name">Idly + Gaari</text><text x="600" y="2060" class="item-price">₹85</text>
+  <text x="120" y="2095" class="item-name">Idly + Gaari + Tomato Bath</text><text x="600" y="2095" class="item-price">₹144</text>
+  <text x="120" y="2130" class="item-name">Idly + Gaari + Upma</text><text x="600" y="2130" class="item-price">₹139</text>
+  <text x="120" y="2165" class="item-name">Idly + Bajji</text><text x="600" y="2165" class="item-price">₹89</text>
+  <text x="120" y="2200" class="item-name">Single Poori with Upma</text><text x="600" y="2200" class="item-price">₹109</text>
+  <text x="120" y="2235" class="item-name">Gaari + Bajji</text><text x="600" y="2235" class="item-price">₹109</text>
+  <text x="120" y="2270" class="item-name">Breakfast Combo</text><text x="600" y="2270" class="item-price">₹99</text>
+  
+  <!-- Evening Tiffins -->
+  <text x="100" y="2335" class="category">🌆 Evening Tiffins (4:00 pm to 10:30 pm)</text>
+  <text x="120" y="2375" class="item-name">Chapathi</text><text x="600" y="2375" class="item-price">₹89</text>
+  
+  <!-- RIGHT COLUMN -->
+  <!-- Soups -->
+  <text x="750" y="270" class="category">🍲 Soups</text>
+  <text x="770" y="310" class="item-name">Sweet Corn Soup</text><text x="1250" y="310" class="item-price">₹139</text>
+  <text x="770" y="345" class="item-name">Tomato Soup</text><text x="1250" y="345" class="item-price">₹139</text>
+  <text x="770" y="380" class="item-name">Hot &amp; Sour Soup</text><text x="1250" y="380" class="item-price">₹149</text>
+  <text x="770" y="415" class="item-name">Lemon Coriander Soup</text><text x="1250" y="415" class="item-price">₹149</text>
+  <text x="770" y="450" class="item-name">Veg Manchow Soup</text><text x="1250" y="450" class="item-price">₹159</text>
+  <text x="770" y="485" class="item-name">Sweet Corn Soup (1/2)</text><text x="1250" y="485" class="item-price">₹159</text>
+  <text x="770" y="520" class="item-name">Lemon Coriander Soup (1/2)</text><text x="1250" y="520" class="item-price">₹169</text>
+  <text x="770" y="555" class="item-name">Veg Manchow Soup (1/2)</text><text x="1250" y="555" class="item-price">₹179</text>
+  <text x="770" y="590" class="item-name">Tomato Soup (1/2)</text><text x="1250" y="590" class="item-price">₹159</text>
+  <text x="770" y="625" class="item-name">Hot &amp; Sour Soup (1/2)</text><text x="1250" y="625" class="item-price">₹169</text>
+  
+  <!-- Starters -->
+  <text x="750" y="690" class="category">🍢 Starters</text>
+  <text x="770" y="730" class="item-name">Paneer 65</text><text x="1250" y="730" class="item-price">₹289</text>
+  <text x="770" y="765" class="item-name">Paneer Manchuria</text><text x="1250" y="765" class="item-price">₹289</text>
+  <text x="770" y="800" class="item-name">Crispy Paneer</text><text x="1250" y="800" class="item-price">₹289</text>
+  <text x="770" y="835" class="item-name">Schezwan Paneer</text><text x="1250" y="835" class="item-price">₹299</text>
+  <text x="770" y="870" class="item-name">Chilli Paneer</text><text x="1250" y="870" class="item-price">₹289</text>
+  <text x="770" y="905" class="item-name">Dragon Paneer</text><text x="1250" y="905" class="item-price">₹329</text>
+  <text x="770" y="940" class="item-name">Paneer 555</text><text x="1250" y="940" class="item-price">₹389</text>
+  <text x="770" y="975" class="item-name">Paneer Majestic</text><text x="1250" y="975" class="item-price">₹389</text>
+  <text x="770" y="1010" class="item-name">Pepper Paneer</text><text x="1250" y="1010" class="item-price">₹299</text>
+  <text x="770" y="1045" class="item-name">Lemon Paneer</text><text x="1250" y="1045" class="item-price">₹289</text>
+  <text x="770" y="1080" class="item-name">Mushroom 65</text><text x="1250" y="1080" class="item-price">₹289</text>
+  <text x="770" y="1115" class="item-name">Mushroom Manchuria</text><text x="1250" y="1115" class="item-price">₹289</text>
+  <text x="770" y="1150" class="item-name">Chilli Mushroom</text><text x="1250" y="1150" class="item-price">₹289</text>
+  <text x="770" y="1185" class="item-name">Lemon Mushroom</text><text x="1250" y="1185" class="item-price">₹289</text>
+  <text x="770" y="1220" class="item-name">Crispy Mushroom</text><text x="1250" y="1220" class="item-price">₹289</text>
+  <text x="770" y="1255" class="item-name">Gobi 65</text><text x="1250" y="1255" class="item-price">₹259</text>
+  <text x="770" y="1290" class="item-name">Gobi Manchuria</text><text x="1250" y="1290" class="item-price">₹249</text>
+  <text x="770" y="1325" class="item-name">Chilli Gobi</text><text x="1250" y="1325" class="item-price">₹249</text>
+  
+  <!-- Indian Curries - Part 1 -->
+  <text x="750" y="1390" class="category">🍛 Indian Curries</text>
+  <text x="770" y="1430" class="item-name">Paneer Curry</text><text x="1250" y="1430" class="item-price">₹239</text>
+  <text x="770" y="1465" class="item-name">Paneer Butter Masala</text><text x="1250" y="1465" class="item-price">₹259</text>
+  <text x="770" y="1500" class="item-name">Palak Paneer</text><text x="1250" y="1500" class="item-price">₹269</text>
+  <text x="770" y="1535" class="item-name">Cashew Paneer</text><text x="1250" y="1535" class="item-price">₹299</text>
+  <text x="770" y="1570" class="item-name">Cashew Butter Masala</text><text x="1250" y="1570" class="item-price">₹319</text>
+  <text x="770" y="1605" class="item-name">Methi Chaman</text><text x="1250" y="1605" class="item-price">₹239</text>
+  <text x="770" y="1640" class="item-name">Jeera Aalu</text><text x="1250" y="1640" class="item-price">₹199</text>
+  <text x="770" y="1675" class="item-name">Aalu Palak</text><text x="1250" y="1675" class="item-price">₹219</text>
+  <text x="770" y="1710" class="item-name">Gobi Masala</text><text x="1250" y="1710" class="item-price">₹199</text>
+  <text x="770" y="1745" class="item-name">Cashew Tomato</text><text x="1250" y="1745" class="item-price">₹299</text>
+  <text x="770" y="1780" class="item-name">Cashew Capsicum</text><text x="1250" y="1780" class="item-price">₹289</text>
+  <text x="770" y="1815" class="item-name">Mushroom Masala</text><text x="1250" y="1815" class="item-price">₹229</text>
+  <text x="770" y="1850" class="item-name">Mixed Veg Curry</text><text x="1250" y="1850" class="item-price">₹229</text>
+  <text x="770" y="1885" class="item-name">Gobi Butter Masala</text><text x="1250" y="1885" class="item-price">₹229</text>
+  <text x="770" y="1920" class="item-name">Capsicum Aalu Masala</text><text x="1250" y="1920" class="item-price">₹199</text>
+  <text x="770" y="1955" class="item-name">Paneer Keema</text><text x="1250" y="1955" class="item-price">₹259</text>
+  <text x="770" y="1990" class="item-name">Babycorn Masala</text><text x="1250" y="1990" class="item-price">₹239</text>
+  <text x="770" y="2025" class="item-name">Chole Masala</text><text x="1250" y="2025" class="item-price">₹219</text>
+  <text x="770" y="2060" class="item-name">Spicy Tomato Curry</text><text x="1250" y="2060" class="item-price">₹219</text>
+  <text x="770" y="2095" class="item-name">Palak Baby Corn</text><text x="1250" y="2095" class="item-price">₹269</text>
+  <text x="770" y="2130" class="item-name">Veg Keema</text><text x="1250" y="2130" class="item-price">₹219</text>
+  <text x="770" y="2165" class="item-name">Kadai Veg</text><text x="1250" y="2165" class="item-price">₹239</text>
+  <text x="770" y="2200" class="item-name">Kadai Paneer</text><text x="1250" y="2200" class="item-price">₹269</text>
+  <text x="770" y="2235" class="item-name">Kadai Mushroom</text><text x="1250" y="2235" class="item-price">₹259</text>
+  <text x="770" y="2270" class="item-name">Kaju Mushroom</text><text x="1250" y="2270" class="item-price">₹299</text>
+  
+  <!-- Biryanis -->
+  <text x="100" y="2450" class="category">🍚 Biryanis</text>
+  <text x="120" y="2490" class="item-name">Mixed Veg Biryani</text><text x="600" y="2490" class="item-price">₹319</text>
+  <text x="120" y="2525" class="item-name">Special Mixed Veg Biryani</text><text x="600" y="2525" class="item-price">₹349</text>
+  <text x="120" y="2560" class="item-name">Mushroom Biryani</text><text x="600" y="2560" class="item-price">₹289</text>
+  <text x="120" y="2595" class="item-name">Paneer Biryani</text><text x="600" y="2595" class="item-price">₹289</text>
+  <text x="120" y="2630" class="item-name">Baby Corn Biryani</text><text x="600" y="2630" class="item-price">₹289</text>
+  <text x="120" y="2665" class="item-name">Gobi Biryani</text><text x="600" y="2665" class="item-price">₹249</text>
+  <text x="120" y="2700" class="item-name">Veg Biryani</text><text x="600" y="2700" class="item-price">₹229</text>
+  <text x="120" y="2735" class="item-name">Special Veg Biryani</text><text x="600" y="2735" class="item-price">₹269</text>
+  <text x="120" y="2770" class="item-name">Special Veg Pulav</text><text x="600" y="2770" class="item-price">₹269</text>
+  <text x="120" y="2805" class="item-name">Panchavati Biryani</text><text x="600" y="2805" class="item-price">₹379</text>
+  <text x="120" y="2840" class="item-name">Tikka Biryani</text><text x="600" y="2840" class="item-price">₹399</text>
+  <text x="120" y="2875" class="item-name">Veg Pulav</text><text x="600" y="2875" class="item-price">₹219</text>
+  <text x="120" y="2910" class="item-name">Veg Moghalai Biryani</text><text x="600" y="2910" class="item-price">₹349</text>
+  <text x="120" y="2945" class="item-name">Kaju Biryani</text><text x="600" y="2945" class="item-price">₹329</text>
+  <text x="120" y="2980" class="item-name">Kaju Paneer Biryani</text><text x="600" y="2980" class="item-price">₹329</text>
+  <text x="120" y="3015" class="item-name">Kaju Mushroom Biryani</text><text x="600" y="3015" class="item-price">₹329</text>
+  <text x="120" y="3050" class="item-name">Plain Biryani</text><text x="600" y="3050" class="item-price">₹199</text>
+  <text x="120" y="3085" class="item-name">Rao Gari Biryani</text><text x="600" y="3085" class="item-price">₹349</text>
+  <text x="120" y="3120" class="item-name">Moon Moon Biryani</text><text x="600" y="3120" class="item-price">₹349</text>
+  
+  <!-- Fried Rice -->
+  <text x="750" y="2450" class="category">🍳 Fried Rice</text>
+  <text x="770" y="2490" class="item-name">Veg Fried Rice</text><text x="1250" y="2490" class="item-price">₹229</text>
+  <text x="770" y="2525" class="item-name">Veg Schezwan Fried Rice</text><text x="1250" y="2525" class="item-price">₹239</text>
+  <text x="770" y="2560" class="item-name">Paneer Fried Rice</text><text x="1250" y="2560" class="item-price">₹269</text>
+  <text x="770" y="2595" class="item-name">Corn Fried Rice</text><text x="1250" y="2595" class="item-price">₹249</text>
+  <text x="770" y="2630" class="item-name">Mushroom Fried Rice</text><text x="1250" y="2630" class="item-price">₹269</text>
+  
+  <!-- Cold Beverages -->
+  <text x="750" y="2695" class="category">🥤 Cold Beverages</text>
+  <text x="770" y="2735" class="item-name">Water Bottle</text><text x="1250" y="2735" class="item-price">₹30</text>
+  <text x="770" y="2770" class="item-name">Soft Drink</text><text x="1250" y="2770" class="item-price">₹40</text>
+  <text x="770" y="2805" class="item-name">Lassi Sweet</text><text x="1250" y="2805" class="item-price">₹79</text>
+  <text x="770" y="2840" class="item-name">Fresh Lime Soda</text><text x="1250" y="2840" class="item-price">₹79</text>
+  <text x="770" y="2875" class="item-name">Butter Milk</text><text x="1250" y="2875" class="item-price">₹69</text>
+  <text x="770" y="2910" class="item-name">Blue Curacao Mojito</text><text x="1250" y="2910" class="item-price">₹89</text>
+  <text x="770" y="2945" class="item-name">Lemon Mint Mojito</text><text x="1250" y="2945" class="item-price">₹89</text>
+  <text x="770" y="2980" class="item-name">Bubblegum Mocktail</text><text x="1250" y="2980" class="item-price">₹99</text>
+  <text x="770" y="3015" class="item-name">Watermelon Mocktail</text><text x="1250" y="3015" class="item-price">₹99</text>
+  
+  <!-- Hot Beverages -->
+  <text x="750" y="3080" class="category">☕ Hot Beverages</text>
+  <text x="770" y="3120" class="item-name">Tea</text><text x="1250" y="3120" class="item-price">₹30</text>
+  <text x="770" y="3155" class="item-name">Tea (1/2)</text><text x="1250" y="3155" class="item-price">₹40</text>
+  <text x="770" y="3190" class="item-name">Coffee</text><text x="1250" y="3190" class="item-price">₹40</text>
+</svg>

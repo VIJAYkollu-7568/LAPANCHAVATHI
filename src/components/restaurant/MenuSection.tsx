@@ -18,7 +18,9 @@ const MenuSection = () => {
     queryKey: ["menu_items", selectedCategory],
     queryFn: async () => {
       if (!selectedCategory) return [];
-      const { data } = await supabase.from("menu_items").select("*").eq("category_id", selectedCategory).eq("is_available", true).order("display_order");
+      const query = supabase.from("menu_items").select("*").eq("is_available", true).order("display_order");
+      const finalQuery = selectedCategory === "all" ? query : query.eq("category_id", selectedCategory);
+      const { data } = await finalQuery;
       return data || [];
     },
     enabled: !!selectedCategory,
@@ -27,12 +29,29 @@ const MenuSection = () => {
   return (
     <section id="menu" className="py-16 bg-background">
       <div className="container">
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <p className="text-accent text-[11px] font-medium tracking-[0.2em] uppercase mb-2">Explore</p>
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
             Our <span className="text-gradient-gold">Menu</span>
           </h2>
           <p className="text-muted-foreground text-xs mt-2">Wide variety of pure vegetarian delights</p>
+          <div className="mt-4 flex flex-wrap justify-center gap-3">
+            <button
+              type="button"
+              onClick={() => setSelectedCategory("all")}
+              className="inline-flex items-center justify-center rounded-full border border-accent px-4 py-2 text-sm font-semibold text-accent transition-colors hover:bg-accent/10 focus:outline-none"
+            >
+              View Full Menu
+            </button>
+            <a
+              href="/menu-sheet.svg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-primary-foreground/10 focus:outline-none"
+            >
+              View Sheet Menu
+            </a>
+          </div>
         </div>
 
         {!selectedCategory ? (
@@ -64,9 +83,20 @@ const MenuSection = () => {
           </div>
         ) : (
           <div className="max-w-4xl mx-auto">
-            <button onClick={() => setSelectedCategory(null)} className="flex items-center gap-1.5 text-accent font-medium text-sm mb-6 hover:underline">
-              <ChevronLeft className="w-4 h-4" /> Back
-            </button>
+            <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
+              <button onClick={() => setSelectedCategory(null)} className="flex items-center gap-1.5 text-accent font-medium text-sm hover:underline">
+                <ChevronLeft className="w-4 h-4" /> Back
+              </button>
+              {selectedCategory !== "all" && (
+                <button
+                  type="button"
+                  onClick={() => setSelectedCategory("all")}
+                  className="inline-flex items-center justify-center rounded-full border border-accent px-4 py-2 text-sm font-semibold text-accent transition-colors hover:bg-accent/10"
+                >
+                  View Full Menu
+                </button>
+              )}
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {items.map((item) => (
                 <div key={item.id} className="flex gap-3 p-3 rounded-xl bg-card border border-border/50 hover:border-accent/30 transition-all shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
